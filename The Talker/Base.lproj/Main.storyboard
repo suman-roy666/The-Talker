@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="messageSendButton" destination="OZ0-sa-dkE" id="EhP-Hj-EU1"/>
+                        <outlet property="messageTableView" destination="3OM-p9-vuO" id="I3P-Id-jkq"/>
                         <outlet property="messageTextField" destination="VGd-1p-WeC" id="0Tp-QD-61y"/>
                     </connections>
                 </viewController>

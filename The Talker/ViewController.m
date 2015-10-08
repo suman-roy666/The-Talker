@@ -8,12 +8,12 @@
 
 #import "ViewController.h"
 #import "Animation.h"
-#include <stdio.h>
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet UIButton *messageSendButton;
+@property (weak, nonatomic) IBOutlet UITableView *messageTableView;
 
 @end
 
@@ -92,10 +92,12 @@
         
         [_messageTextField setText:Nil];
         
-        for (NSString *tempString in messages) {
-            
-            printf("%s\n", [ tempString cString] );
-        }
+        [ _messageTableView reloadData];
+        
+//        for (NSString *tempString in messages) {
+//            
+//            //printf("%s\n", [ tempString cString] );
+//        }
     }
 }
 
