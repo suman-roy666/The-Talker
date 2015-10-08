@@ -14,6 +14,7 @@
 		11EE83951BC6905A00E353C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EE83941BC6905A00E353C8 /* Images.xcassets */; };
 		11EE83981BC6905A00E353C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EE83961BC6905A00E353C8 /* LaunchScreen.xib */; };
 		11EE83A41BC6905A00E353C8 /* The_TalkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EE83A31BC6905A00E353C8 /* The_TalkerTests.m */; };
+		11EE83AF1BC69E2E00E353C8 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EE83AE1BC69E2E00E353C8 /* Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		11EE839D1BC6905A00E353C8 /* The TalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The TalkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EE83A21BC6905A00E353C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11EE83A31BC6905A00E353C8 /* The_TalkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = The_TalkerTests.m; sourceTree = "<group>"; };
+		11EE83AD1BC69E2E00E353C8 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		11EE83AE1BC69E2E00E353C8 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 			children = (
 				11EE83881BC6905A00E353C8 /* Info.plist */,
 				11EE83891BC6905A00E353C8 /* main.m */,
+				11EE83AD1BC69E2E00E353C8 /* Animation.h */,
+				11EE83AE1BC69E2E00E353C8 /* Animation.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				11EE83901BC6905A00E353C8 /* ViewController.m in Sources */,
 				11EE838D1BC6905A00E353C8 /* AppDelegate.m in Sources */,
+				11EE83AF1BC69E2E00E353C8 /* Animation.m in Sources */,
 				11EE838A1BC6905A00E353C8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

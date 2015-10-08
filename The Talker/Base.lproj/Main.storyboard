@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-p9-vuO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="48" width="400" height="444"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="400" height="291"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="699"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="GOD-w1-2IG"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="jDZ-7F-c9C"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VGd-1p-WeC" userLabel="Messge Field">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="16" y="550" width="307" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="messageFieldEditDidBegin:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="b8h-Pp-Yh5"/>
+                                    <action selector="messageFieldEditDidEnd:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="Qaz-AO-4pV"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ0-sa-dkE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="331" y="550" width="53" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EgM-l0-KBy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OZ0-sa-dkE" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="DQq-RT-p3b"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VGd-1p-WeC" secondAttribute="bottom" constant="20" id="GaE-Yn-Mlm"/>
+                            <constraint firstItem="OZ0-sa-dkE" firstAttribute="leading" secondItem="VGd-1p-WeC" secondAttribute="trailing" constant="8" id="PZd-dq-wBi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OZ0-sa-dkE" secondAttribute="bottom" constant="20" id="R9a-XU-Kgw"/>
+                            <constraint firstItem="VGd-1p-WeC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="xGL-pa-B7B"/>
+                            <constraint firstAttribute="trailing" secondItem="VGd-1p-WeC" secondAttribute="trailing" constant="77" id="yKz-OB-Kke"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3OM-p9-vuO"/>
+                                <exclude reference="VGd-1p-WeC"/>
+                                <exclude reference="OZ0-sa-dkE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="xGL-pa-B7B"/>
+                                <exclude reference="yKz-OB-Kke"/>
+                                <exclude reference="GaE-Yn-Mlm"/>
+                                <exclude reference="R9a-XU-Kgw"/>
+                                <exclude reference="DQq-RT-p3b"/>
+                                <exclude reference="PZd-dq-wBi"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3OM-p9-vuO"/>
+                                <include reference="VGd-1p-WeC"/>
+                                <include reference="OZ0-sa-dkE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="xGL-pa-B7B"/>
+                                <include reference="yKz-OB-Kke"/>
+                                <include reference="GaE-Yn-Mlm"/>
+                                <include reference="R9a-XU-Kgw"/>
+                                <include reference="DQq-RT-p3b"/>
+                                <include reference="PZd-dq-wBi"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="messageSendButton" destination="OZ0-sa-dkE" id="EhP-Hj-EU1"/>
+                        <outlet property="messageTextField" destination="VGd-1p-WeC" id="0Tp-QD-61y"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="567" y="372"/>
         </scene>
     </scenes>
 </document>
