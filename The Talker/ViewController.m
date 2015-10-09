@@ -106,7 +106,7 @@ static NSString *tableCellIdentifier = @"TalkerTableCell";
     NSString *messageText = _messageTextField.text;
 
     
-    if ( messageText!= Nil ) {
+    if ( [[ messageText stringByTrimmingCharactersInSet: [ NSCharacterSet whitespaceCharacterSet] ] compare:@"" ] != FALSE ) {
         
         [ messages addObject:_messageTextField.text];
         
