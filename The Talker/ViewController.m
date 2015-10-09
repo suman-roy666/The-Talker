@@ -91,6 +91,10 @@ static NSString *tableCellIdentifier = @"TalkerTableCell";
 
 }
 
+/**
+ *  Used to dismiss the keyboard. This function is called from Action handlers
+ */
+
 -(void)dismissKeyboard {
     [ _messageTextField resignFirstResponder];
 }
@@ -110,10 +114,6 @@ static NSString *tableCellIdentifier = @"TalkerTableCell";
         
         [ _messageTableView reloadData];
         
-//        for (NSString *tempString in messages) {
-//            
-//            //printf("%s\n", [ tempString cString] );
-//        }
     }
 }
 
