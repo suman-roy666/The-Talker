@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11085D1C1BC78F0D00CB2941 /* TalkerTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11085D1B1BC78F0D00CB2941 /* TalkerTableCell.xib */; };
+		11085D1F1BC7905700CB2941 /* TalkerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11085D1E1BC7905700CB2941 /* TalkerTableViewCell.m */; };
 		11EE838A1BC6905A00E353C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EE83891BC6905A00E353C8 /* main.m */; };
 		11EE838D1BC6905A00E353C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EE838C1BC6905A00E353C8 /* AppDelegate.m */; };
 		11EE83901BC6905A00E353C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EE838F1BC6905A00E353C8 /* ViewController.m */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11085D1B1BC78F0D00CB2941 /* TalkerTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkerTableCell.xib; sourceTree = "<group>"; };
+		11085D1D1BC7905700CB2941 /* TalkerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkerTableViewCell.h; sourceTree = "<group>"; };
+		11085D1E1BC7905700CB2941 /* TalkerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkerTableViewCell.m; sourceTree = "<group>"; };
 		11EE83841BC6905A00E353C8 /* The Talker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Talker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EE83881BC6905A00E353C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11EE83891BC6905A00E353C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11085D1A1BC78E8C00CB2941 /* Custom Visual Files */ = {
+			isa = PBXGroup;
+			children = (
+				11EE83AD1BC69E2E00E353C8 /* Animation.h */,
+				11EE83AE1BC69E2E00E353C8 /* Animation.m */,
+				11085D1B1BC78F0D00CB2941 /* TalkerTableCell.xib */,
+				11085D1D1BC7905700CB2941 /* TalkerTableViewCell.h */,
+				11085D1E1BC7905700CB2941 /* TalkerTableViewCell.m */,
+			);
+			name = "Custom Visual Files";
+			sourceTree = "<group>";
+		};
 		11EE837B1BC6905A00E353C8 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +101,7 @@
 		11EE83861BC6905A00E353C8 /* The Talker */ = {
 			isa = PBXGroup;
 			children = (
+				11085D1A1BC78E8C00CB2941 /* Custom Visual Files */,
 				11EE838B1BC6905A00E353C8 /* AppDelegate.h */,
 				11EE838C1BC6905A00E353C8 /* AppDelegate.m */,
 				11EE838E1BC6905A00E353C8 /* ViewController.h */,
@@ -101,8 +119,6 @@
 			children = (
 				11EE83881BC6905A00E353C8 /* Info.plist */,
 				11EE83891BC6905A00E353C8 /* main.m */,
-				11EE83AD1BC69E2E00E353C8 /* Animation.h */,
-				11EE83AE1BC69E2E00E353C8 /* Animation.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,6 +223,7 @@
 				11EE83931BC6905A00E353C8 /* Main.storyboard in Resources */,
 				11EE83981BC6905A00E353C8 /* LaunchScreen.xib in Resources */,
 				11EE83951BC6905A00E353C8 /* Images.xcassets in Resources */,
+				11085D1C1BC78F0D00CB2941 /* TalkerTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EE83901BC6905A00E353C8 /* ViewController.m in Sources */,
+				11085D1F1BC7905700CB2941 /* TalkerTableViewCell.m in Sources */,
 				11EE838D1BC6905A00E353C8 /* AppDelegate.m in Sources */,
 				11EE83AF1BC69E2E00E353C8 /* Animation.m in Sources */,
 				11EE838A1BC6905A00E353C8 /* main.m in Sources */,
@@ -422,6 +440,7 @@
 				11EE83A91BC6905A00E353C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11EE83AA1BC6905A00E353C8 /* Build configuration list for PBXNativeTarget "The TalkerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +449,7 @@
 				11EE83AC1BC6905A00E353C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

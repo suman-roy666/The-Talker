@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Animation.h"
+#import "TalkerTableViewCell.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,8 @@
     NSMutableArray *messages;
 }
 
+static NSString *tableCellIdentifier = @"TalkerTableCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +32,15 @@
     [ _messageTextField setClearsOnBeginEditing:TRUE];
     
     messages = [ NSMutableArray arrayWithObjects:@"This is a table view",@"This is placeholder text", nil];
+    
+    
+    [ _messageTableView registerClass:[TalkerTableViewCell class] forCellReuseIdentifier:tableCellIdentifier ];
+    
+    [ _messageTableView registerNib:[UINib nibWithNibName:NSStringFromClass([TalkerTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"TalkerTableViewCell"];
+    
+    _messageTableView.estimatedRowHeight = 44.0;
+    _messageTableView.rowHeight = UITableViewAutomaticDimension;
+    _messageTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,16 +59,20 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    TalkerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableCellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [messages objectAtIndex:indexPath.row];
+    cell.textLabel.text = [ messages objectAtIndex: indexPath.row  ];
+    
+    cell.textLabel.numberOfLines = 0;
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark - Action Delegate Functions
