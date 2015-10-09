@@ -2,13 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
@@ -77,10 +77,10 @@
                                 <exclude reference="OZ0-sa-dkE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="xGL-pa-B7B"/>
-                                <exclude reference="yKz-OB-Kke"/>
                                 <exclude reference="GaE-Yn-Mlm"/>
                                 <exclude reference="R9a-XU-Kgw"/>
+                                <exclude reference="xGL-pa-B7B"/>
+                                <exclude reference="yKz-OB-Kke"/>
                                 <exclude reference="DQq-RT-p3b"/>
                                 <exclude reference="PZd-dq-wBi"/>
                             </mask>
@@ -92,10 +92,10 @@
                                 <include reference="OZ0-sa-dkE"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="xGL-pa-B7B"/>
-                                <include reference="yKz-OB-Kke"/>
                                 <include reference="GaE-Yn-Mlm"/>
                                 <include reference="R9a-XU-Kgw"/>
+                                <include reference="xGL-pa-B7B"/>
+                                <include reference="yKz-OB-Kke"/>
                                 <include reference="DQq-RT-p3b"/>
                                 <include reference="PZd-dq-wBi"/>
                             </mask>
@@ -107,6 +107,7 @@
                         <outlet property="messageTextField" destination="VGd-1p-WeC" id="0Tp-QD-61y"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="567" y="372"/>
         </scene>
