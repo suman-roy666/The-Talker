@@ -42,6 +42,9 @@
                                 <variation key="widthClass=compact" ambiguous="YES">
                                     <rect key="frame" x="16" y="550" width="307" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="745" width="307" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="messageFieldEditDidBegin:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="b8h-Pp-Yh5"/>
                                     <action selector="messageFieldEditDidEnd:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="Qaz-AO-4pV"/>
@@ -55,6 +58,9 @@
                                 </state>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="331" y="550" width="53" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="331" y="745" width="53" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="sendButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EgM-l0-KBy"/>

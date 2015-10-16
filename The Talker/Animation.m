@@ -21,18 +21,18 @@ CGFloat animatedDistance;
 
 + (void)textFieldDidBeginEditing:(UITextField *)textField inView:(UIViewController *)view  {
     
-    CGRect textFieldRect =
-    [view.view.window convertRect:textField.bounds fromView:textField];
-    CGRect viewRect =
-    [view.view.window convertRect:view.view.bounds fromView:view.view];
+    CGRect textFieldRect = [view.view.window convertRect:textField.bounds fromView:textField];
+    
+    CGRect viewRect = [view.view.window convertRect:view.view.bounds fromView:view.view];
+    
     CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
-    CGFloat numerator =
-    midline - viewRect.origin.y
-    - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
-    CGFloat denominator =
-    (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION)
-    * viewRect.size.height;
+    
+    CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;
+    
+    CGFloat denominator = (MAXIMUM_SCROLL_FRACTION - MINIMUM_SCROLL_FRACTION) * viewRect.size.height;
+    
     CGFloat heightFraction = numerator / denominator;
+    
     if (heightFraction < 0.0)
     {
         heightFraction = 0.0;
@@ -41,8 +41,10 @@ CGFloat animatedDistance;
     {
         heightFraction = 1.0;
     }
+    
     UIInterfaceOrientation orientation =
     [[UIApplication sharedApplication] statusBarOrientation];
+    
     if (orientation == UIInterfaceOrientationPortrait ||
         orientation == UIInterfaceOrientationPortraitUpsideDown)
     {
@@ -52,6 +54,7 @@ CGFloat animatedDistance;
     {
         animatedDistance = floor(LANDSCAPE_KEYBOARD_HEIGHT * heightFraction);
     }
+    
     CGRect viewFrame = view.view.frame;
     viewFrame.origin.y -= animatedDistance;
     
